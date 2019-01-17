@@ -1,0 +1,5 @@
+# Not yet...
+
+# deb [arch=armhf] http://archive.raspberrypi.org/debian/ buster main ui
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+# deb-src [arch=armhf] http://archive.raspberrypi.org/debian/ buster main ui

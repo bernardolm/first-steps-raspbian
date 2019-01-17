@@ -1,0 +1,10 @@
+# Not yet...
+
+# deb [arch=armhf] http://ftp.debian.org/debian/ buster main contrib non-free
+# deb-src [arch=armhf] http://ftp.debian.org/debian/ stretch main contrib non-free
+
+# deb [arch=armhf] http://ftp.debian.org/debian/ buster-updates main contrib non-free
+# deb-src [arch=armhf] http://ftp.debian.org/debian/ stretch-updates main contrib non-free
+
+# deb [arch=armhf] http://security.debian.org/ buster/updates main contrib non-free
+# deb-src [arch=armhf] http://security.debian.org/ stretch/updates main contrib non-free

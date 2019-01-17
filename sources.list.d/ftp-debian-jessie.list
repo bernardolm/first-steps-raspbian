@@ -1,0 +1,8 @@
+deb [arch=armhf] http://ftp.debian.org/debian/ jessie main contrib non-free
+# deb-src [arch=armhf] http://ftp.debian.org/debian/ jessie main contrib non-free
+
+deb [arch=armhf] http://ftp.debian.org/debian/ jessie-updates main contrib non-free
+# deb-src [arch=armhf] http://ftp.debian.org/debian/ jessie-updates main contrib non-free
+
+deb [arch=armhf] http://security.debian.org/ jessie/updates main contrib non-free
+# deb-src [arch=armhf] http://security.debian.org/ jessie/updates main contrib non-free

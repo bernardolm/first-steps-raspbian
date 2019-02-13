@@ -1,6 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
-node server.js &
+PWD=`pwd`
+source ${PWD}/../functions.sh
+
+run_server() {
+    LATEST=$(get_latest_stremio_release)
+    cd ${PWD}/v${LATEST}
+    echo 'running from '`pwd`
+    node server.js
+}
+
+run_server &
 
 sleep 5s
 

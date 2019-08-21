@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Stremio
+Comment=Video organizer for your Movies, TV Shows and TV Channels
+Exec=~/Downloads/first-steps-raspbian/stremio/stremio.sh
+Icon=~/Downloads/first-steps-raspbian/stremio/icons/smartcode-stremio_128.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video;Player;TV;
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;x-scheme-handler/stremio;video/avi;video/msvideo;video/x-msvideo;video/mp4;video/x-matroska;

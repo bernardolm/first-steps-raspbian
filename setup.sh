@@ -16,7 +16,7 @@ sudo apt install --yes jq nodejs debian-keyring raspbian-archive-keyring zsh mat
 
 echo -e '\ninstalling stremio\n'
 get_latest_stremio_server_js
-sudo cp stremio/stremio.desktop /usr/share/applications
+sudo cp stremio/stremio.desktop ~/.local/share/applications
 
 echo -e '\ninstalling oh-my-zsh\n'
 /bin/sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

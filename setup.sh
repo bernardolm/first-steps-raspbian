@@ -1,9 +1,6 @@
 #!/bin/bash
 reset
 
-echo -e '\nloading custom functions.sh\n'
-source functions.sh
-
 echo -e '\nremoving not used packages\n'
 sudo apt purge idle3 ^geany --yes
 sudo apt --purge autoremove --yes
@@ -15,7 +12,7 @@ sudo apt update
 sudo apt install --yes jq nodejs debian-keyring raspbian-archive-keyring zsh matchbox-keyboard curl
 
 echo -e '\ninstalling stremio\n'
-get_latest_stremio_server_js
+./install_stremio.sh
 sudo cp stremio/stremio.desktop ~/.local/share/applications
 
 echo -e '\ninstalling oh-my-zsh\n'

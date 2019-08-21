@@ -12,7 +12,7 @@ echo -e '\nupdating and adding needed packages\n'
 sudo mv /etc/apt/sources.list.d/raspi.list ~/raspi.list.old
 sudo cp -f sources.list /etc/apt
 sudo apt update
-sudo apt install --yes jq debian-keyring raspbian-archive-keyring zsh matchbox-keyboard curl
+sudo apt install --yes jq nodejs debian-keyring raspbian-archive-keyring zsh matchbox-keyboard curl
 
 echo -e '\ninstalling stremio\n'
 get_latest_stremio_server_js

@@ -20,7 +20,7 @@ get_latest_stremio_server_js
 # sudo wget -O - https://ftp-master.debian.org/keys/archive-key-9.asc | sudo apt-key add -
 # sudo wget -O - https://ftp-master.debian.org/keys/archive-key-9-security.asc | sudo apt-key add -
 
-# sudo rm /etc/apt/sources.list.d/raspi.list
+# sudo mv /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.old
 # sudo cp -f sources.list /etc/apt
 # sudo cp -f sources.list.d/*.* /etc/apt/sources.list.d
 

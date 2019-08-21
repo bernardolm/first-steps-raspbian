@@ -1,28 +1,27 @@
 TIMENOW=$(date +"%Y%m%d%H%M%S")
 
-get_latest_release_v3() {
+function get_latest_release_v3() {
     /usr/bin/curl --silent -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$1/tags" |
-        jq -r '.[].name' |
+        /usr/bin/jq -r '.[].name' |
         grep -v "autoupdate" |
         sed -e 's/v//g' |
         sort --version-sort --reverse |
         head -n 1
-    # echo -e '4.4.25'
 }
 
-get_latest_stremio_release() {
+function get_latest_stremio_release() {
     get_latest_release_v3 'Stremio/stremio-shell'
 }
 
-backup_folder() {
+function backup_folder() {
     /bin/mv $1 $2
 }
 
-download_file() {
+function download_file() {
     /usr/bin/curl --silent -o $2 $1
 }
 
-get_latest_stremio_server_js() {
+function get_latest_stremio_server_js() {
     echo -e 'checking latest stremio version...\n'
 
     LATEST=$(get_latest_stremio_release)
@@ -35,7 +34,7 @@ get_latest_stremio_server_js() {
     echo -e 'path to download is '${PATH}', checking...\n'
 
     if [ -d ${PATH} ]; then
-        echo -e 'already exist '${PATH}', backuping...\n';
+        echo -e 'already exist '${PATH}', backuping to '${PATH}'_bkp_'${TIMENOW}'...\n';
 
         backup_folder ${PATH} ${PATH}_bkp_${TIMENOW}
     else

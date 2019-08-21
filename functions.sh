@@ -1,12 +1,14 @@
-TIMENOW=$(date +"%Y%m%d%H%M%S")
+#!/bin/bash
+
+TIMENOW=$(/bin/date +"%Y%m%d%H%M%S")
 
 function get_latest_release_v3() {
     /usr/bin/curl --silent -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$1/tags" |
         /usr/bin/jq -r '.[].name' |
-        grep -v "autoupdate" |
-        sed -e 's/v//g' |
-        sort --version-sort --reverse |
-        head -n 1
+        /bin/grep -v "autoupdate" |
+        /bin/sed -e 's/v//g' |
+        /usr/bin/sort --version-sort --reverse |
+        /usr/bin/head -n 1
 }
 
 function get_latest_stremio_release() {
@@ -52,3 +54,5 @@ function get_latest_stremio_server_js() {
 
     echo -e 'finish download stremio server\n'
 }
+
+get_latest_stremio_server_js

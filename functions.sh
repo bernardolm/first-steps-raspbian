@@ -1,6 +1,9 @@
 TIMENOW=$(date +"%Y%m%d%H%M%S")
 
 get_latest_release_v3() {
+ifeq ($(shell [ ! -x jq ] || echo -n no),no)
+	sudo apt install jq --yes
+endif
     /usr/bin/curl --silent -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$1/tags" |
         jq -r '.[].name' |
         grep -v "autoupdate" |

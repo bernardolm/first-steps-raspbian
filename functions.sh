@@ -3,6 +3,7 @@ TIMENOW=$(date +"%Y%m%d%H%M%S")
 get_latest_release_v3() {
     /usr/bin/curl --silent -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$1/tags" |
         jq -r '.[].name' |
+        grep -v "autoupdate" |
         sed -e 's/v//g' |
         sort --version-sort --reverse |
         head -n 1
